@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://myuniverse2011.blogspot.com/sitemap.xml

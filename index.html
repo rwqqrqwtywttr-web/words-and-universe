@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Words & Universe by Prince Chautmol | Every Word Has a World</title>
+  <meta name="title" content="Words & Universe by Prince Chautmol | Every Word Has a World">
+  <meta name="description" content="Official modern publishing publication of author Prince Chautmol. Deep reflections, Marathi literature, philosophical essays, life observations, and stories from myuniverse2011.blogspot.com.">
+  <meta name="author" content="Prince Chautmol">
+  <meta name="keywords" content="Prince Chautmol, Words and Universe, Marathi Lekh, Jeevan Vichar, Marathi Sahitya, Literature, Essays, Quotes, Blog, My Universe 2011">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://myuniverse2011.blogspot.com/">
+  <meta property="og:title" content="Words & Universe by Prince Chautmol | Every Word Has a World">
+  <meta property="og:description" content="Explore deep literary essays, personal memories, and philosophical reflections by Prince Chautmol.">
+  <meta property="og:site_name" content="Words & Universe">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Words & Universe by Prince Chautmol">
+  <meta property="twitter:description" content="Every Word Has a World — Published essays & thoughts by Prince Chautmol.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+      <span>“Every Word Has a World” — Literary Journal by Prince Chautmol</span>
+      <div style="display:flex;align-items:center;gap:1.5rem;">
+        <span class="live-badge"><span class="live-dot"></span> <span id="sync-status-text">Connected to Blogger</span></span>
+        <span id="article-count-badge" style="font-weight:600;color:var(--text-primary);">25 Articles Live</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="brand-wrapper">
+        <a href="#home" class="brand-title">
+          Words <span class="amp">&</span> Universe
+        </a>
+        <span class="brand-author">By Prince Chautmol</span>
+      </div>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#articles" class="nav-link">All Articles</a>
+        <a href="#marathi" class="nav-link" onclick="setLanguage('marathi')">मराठी</a>
+        <a href="#hindi" class="nav-link" onclick="setLanguage('hindi')">हिंदी</a>
+        <a href="#english" class="nav-link" onclick="setLanguage('english')">English</a>
+        <a href="#quotes" class="nav-link">Quotes</a>
+        <a href="#books" class="nav-link">Books</a>
+        <a href="#author" class="nav-link">About Author</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" onclick="toggleSearchModal(true)" title="Search Articles" aria-label="Search">
+          🔍
+        </button>
+        <button class="icon-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <button class="pill-btn" onclick="openAdminModal()" style="font-size:0.75rem;padding:0.35rem 0.75rem;border-color:var(--accent-gold);">
+          ⚙️ Admin
+        </button>
+        <button class="icon-btn menu-toggle" onclick="toggleMobileMenu()" aria-label="Open Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sub Navigation Language / Quick Filters -->
+  <div class="sub-nav-bar">
+    <div class="container sub-nav-wrapper">
+      <div class="lang-pills">
+        <button class="pill-btn lang-btn active" data-lang="all" onclick="setLanguage('all')">All Languages</button>
+        <button class="pill-btn lang-btn" data-lang="marathi" onclick="setLanguage('marathi')">मराठी लेख (Marathi)</button>
+        <button class="pill-btn lang-btn" data-lang="hindi" onclick="setLanguage('hindi')">हिंदी साहित्य (Hindi)</button>
+        <button class="pill-btn lang-btn" data-lang="english" onclick="setLanguage('english')">English Essays</button>
+      </div>
+      <div style="font-size:0.8rem;color:var(--text-muted);display:flex;align-items:center;gap:0.5rem;">
+        <span>Original:</span>
+        <a href="https://myuniverse2011.blogspot.com" target="_blank" style="color:var(--accent-gold);text-decoration:underline;">myuniverse2011.blogspot.com ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text-col">
+        <span class="hero-tag">Official Publication Frontend</span>
+        <h1 class="hero-title">Words & Universe</h1>
+        <p class="hero-subtitle">
+          "Every Word Has a World." — Memories, emotions, and philosophical observations from the heart of Prince Chautmol.
+        </p>
+
+        <div class="hero-author-badge">
+          <div class="author-avatar">PC</div>
+          <div>
+            <div style="font-weight:700;font-size:1.05rem;">Prince Chautmol</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);">Essayist, Thinker & Author • Founder of Words & Universe</div>
+          </div>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" id="stat-posts">25+</span>
+            <span class="stat-lbl">Published Works</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">3</span>
+            <span class="stat-lbl">Languages</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-lbl">Original Voice</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Card Container -->
+      <div id="featured-post-container">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Articles Feed Section -->
+  <section class="container" style="padding: 3.5rem 0;" id="articles">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Latest Published Articles</h2>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-top:0.4rem;" id="filtered-count">
+          Showing real-time published articles from Blogger
+        </p>
+      </div>
+      <div>
+        <button class="pill-btn" onclick="fetchBloggerArticles()" title="Force Refresh from Blogger">
+          ↻ Sync Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Chips Bar -->
+    <div id="category-chips-list" style="display:flex;gap:0.5rem;overflow-x:auto;padding-bottom:1.5rem;margin-bottom:1.5rem;">
+      <!-- Populated by JS -->
+    </div>
+
+    <!-- Articles Grid -->
+    <div class="articles-grid" id="articles-grid">
+      <div style="padding:3rem;text-align:center;grid-column:1/-1;color:var(--text-muted);">
+        Loading published articles from Prince Chautmol's blog...
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-articles" style="display:none;padding:4rem;text-align:center;background:var(--bg-secondary);border-radius:var(--radius-md);">
+      <h3 style="font-size:1.5rem;margin-bottom:0.8rem;">No articles found</h3>
+      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Try choosing another category or clearing your search term.</p>
+      <button class="btn-primary" onclick="currentCategory='all';currentLanguage='all';searchQuery='';applyFilters();">Reset Filters</button>
+    </div>
+  </section>
+
+  <!-- Curated Quotes Section -->
+  <section class="quotes-section" id="quotes">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="hero-tag">Reflections & Thoughts</span>
+          <h2 class="section-title">Words of Wisdom by Prince Chautmol</h2>
+        </div>
+      </div>
+
+      <div class="quote-carousel" id="quotes-container">
+        <!-- Quotes rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Books & Publications Section -->
+  <section class="container" style="padding: 4.5rem 0;" id="books">
+    <div class="section-header">
+      <div>
+        <span class="hero-tag">Literary Works</span>
+        <h2 class="section-title">Books & Anthologies</h2>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-top:0.4rem;">
+          Published volumes and special editorial series by Prince Chautmol
+        </p>
+      </div>
+    </div>
+
+    <div class="books-grid" id="books-container">
+      <!-- Books rendered by JS -->
+    </div>
+  </section>
+
+  <!-- Author Profile Section -->
+  <section class="container" style="padding: 4rem 0;border-top:1px solid var(--border-subtle);" id="author">
+    <div style="display:grid;grid-template-columns:300px 1fr;gap:3.5rem;align-items:center;">
+      <div style="text-align:center;">
+        <div style="width:200px;height:200px;margin:0 auto 1.5rem;border-radius:50%;background:linear-gradient(135deg, #1C1816, #423831);display:flex;align-items:center;justify-content:center;border:4px solid var(--accent-gold);box-shadow:var(--shadow-md);">
+          <span style="font-family:var(--font-serif);font-size:3.5rem;color:var(--accent-gold);font-weight:700;">PC</span>
+        </div>
+        <h3 style="font-size:1.5rem;margin-bottom:0.2rem;">Prince Chautmol</h3>
+        <p style="color:var(--accent-gold);font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;">Author & Essayist</p>
+        <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem;">pchautmol208@gmail.com</p>
+      </div>
+
+      <div>
+        <span class="hero-tag">Behind The Words</span>
+        <h2 style="font-size:2.2rem;margin-bottom:1.2rem;">"माझ्या शब्दांत जपलेल्या काही खास आठवणी आणि अनुभव"</h2>
+        <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;margin-bottom:1.2rem;">
+          Welcome to <strong>Words & Universe</strong>. I am Prince Chautmol. Writing has never been just a craft for me—it is a spiritual journey of translating the unexpressed whispers of life into enduring language.
+        </p>
+        <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;margin-bottom:1.5rem;">
+          Through my essays on relationships (नाती), human empathy (माणुसकी), motherly love (आई), equality for the specially-abled (दिव्यांग), and the existential realities of life, my goal is to give every reader a quiet sanctuary of reflection. Every word has a universe waiting to be discovered.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#articles" class="btn-primary">Explore Published Articles</a>
+          <a href="https://myuniverse2011.blogspot.com" target="_blank" class="btn-outline">Visit Blogger Archive ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="container" style="padding: 4.5rem 0;border-top:1px solid var(--border-subtle);" id="contact">
+    <div style="max-width:720px;margin:0 auto;text-align:center;">
+      <span class="hero-tag">Get in Touch</span>
+      <h2 class="section-title" style="margin-bottom:1rem;">Correspond with Prince Chautmol</h2>
+      <p style="color:var(--text-secondary);margin-bottom:2.5rem;">
+        Have a reflection to share, a collaborative inquiry, or reader feedback? Reach out directly.
+      </p>
+
+      <form class="newsletter-form" onsubmit="handleContactSubmit(event)" style="text-align:left;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+          <div>
+            <label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:0.4rem;">Your Name</label>
+            <input type="text" class="input-field" style="width:100%;" placeholder="e.g. Anand Sharma" required>
+          </div>
+          <div>
+            <label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:0.4rem;">Your Email</label>
+            <input type="email" class="input-field" style="width:100%;" placeholder="e.g. anand@example.com" required>
+          </div>
+        </div>
+        <div style="margin-bottom:1rem;">
+          <label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:0.4rem;">Subject / Article Reference</label>
+          <input type="text" class="input-field" style="width:100%;" placeholder="e.g. Feedback on 'नफरत म्हणजे काय'">
+        </div>
+        <div style="margin-bottom:1.5rem;">
+          <label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:0.4rem;">Your Message</label>
+          <textarea class="input-field" style="width:100%;height:130px;resize:vertical;" placeholder="Write your thoughts..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;">Send Message to Prince Chautmol</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Words & Universe</div>
+          <p class="footer-tagline">
+            "Every Word Has a World." Official modernized publication frontend connected to Prince Chautmol's literary universe.
+          </p>
+          <div style="font-size:0.85rem;color:#C5A059;">
+            Author: Prince Chautmol<br>
+            Email: pchautmol208@gmail.com
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#articles">All Published Articles</a></li>
+            <li><a href="#quotes">Quotes & Thoughts</a></li>
+            <li><a href="#books">Books & Series</a></li>
+            <li><a href="#author">About Prince Chautmol</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#articles" onclick="selectCategory('मराठी लेख')">मराठी लेख</a></li>
+            <li><a href="#articles" onclick="selectCategory('जीवन विचार')">जीवन विचार</a></li>
+            <li><a href="#articles" onclick="selectCategory('नाती')">नाती व संस्कार</a></li>
+            <li><a href="#articles" onclick="selectCategory('माणुसकी')">माणुसकी</a></li>
+            <li><a href="#articles" onclick="selectCategory('मातृत्व')">मातृत्व व आई</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Newsletter</h4>
+          <p style="font-size:0.85rem;color:#A89E92;margin-bottom:1rem;">
+            Receive newly published essays directly in your inbox.
+          </p>
+          <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+            <input type="email" id="newsletter-email" class="input-field" placeholder="Enter your email" required>
+            <button type="submit" class="btn-primary">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Words & Universe by Prince Chautmol. All Rights Reserved.
+        </div>
+        <div style="display:flex;gap:1.5rem;">
+          <a href="#privacy" onclick="alert('Privacy Policy: Words & Universe respects reader confidentiality. We do not track personal identifying data or sell information.')">Privacy Policy</a>
+          <a href="#terms" onclick="alert('Terms: All original essays, quotes and writings belong to author Prince Chautmol and are protected by copyright.')">Terms of Service</a>
+          <a href="https://myuniverse2011.blogspot.com" target="_blank">Original Blogger Site ↗</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reader Modal / Article Reading Experience -->
+  <div class="reader-modal" id="reader-modal">
+    <div class="reader-top-bar">
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <button class="pill-btn" onclick="closeReaderModal()">← Back to Articles</button>
+        <span style="font-size:0.85rem;font-weight:600;display:none;sm:inline;" id="reader-top-title">Words & Universe</span>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <button class="icon-btn" onclick="changeReaderFontSize(-2)" title="Smaller text">A-</button>
+        <button class="icon-btn" onclick="changeReaderFontSize(2)" title="Larger text">A+</button>
+        <button class="pill-btn" onclick="sharePost('whatsapp')">WhatsApp</button>
+        <button class="pill-btn" onclick="sharePost('twitter')">X / Twitter</button>
+        <button class="pill-btn" onclick="sharePost('copy')">Copy Link</button>
+      </div>
+
+      <div class="reader-progress" id="reader-progress-bar"></div>
+    </div>
+
+    <div class="reader-content-wrap">
+      <div class="reader-header">
+        <span class="reader-category" id="reader-category">Article</span>
+        <h1 class="reader-title" id="reader-title">Article Title</h1>
+        <div class="reader-meta-bar" id="reader-meta">
+          <!-- Meta inserted by JS -->
+        </div>
+      </div>
+
+      <div class="reader-body" id="reader-body">
+        <!-- Body inserted by JS -->
+      </div>
+
+      <!-- Source Callout -->
+      <div class="original-source-box">
+        <div>
+          <div style="font-weight:600;font-size:0.95rem;">Published by Prince Chautmol</div>
+          <div style="font-size:0.82rem;color:var(--text-muted);">Originally authored and preserved on Blogger</div>
+        </div>
+        <a id="reader-original-link" href="#" target="_blank" class="btn-primary" style="padding:0.5rem 1rem;font-size:0.85rem;">
+          View on Blogger ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Overlay Modal -->
+  <div class="search-overlay" id="search-overlay" onclick="if(event.target === this) toggleSearchModal(false)">
+    <div class="search-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+        <h3 style="font-size:1.3rem;">Search Articles</h3>
+        <button class="icon-btn" onclick="toggleSearchModal(false)">✕</button>
+      </div>
+      <input 
+        type="text" 
+        id="search-input-modal" 
+        class="input-field" 
+        style="width:100%;font-size:1.1rem;padding:0.9rem;" 
+        placeholder="Search keywords, e.g. आई, नाती, माणुसकी, नफरत..."
+        oninput="handleSearchInput(this.value)"
+      >
+      <div style="margin-top:1.5rem;font-size:0.85rem;color:var(--text-muted);">
+        Type above and scroll to articles section to view filtered results in real-time.
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard Modal -->
+  <div class="admin-modal" id="admin-modal" onclick="if(event.target === this) closeAdminModal()">
+    <div class="admin-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;border-bottom:1px solid var(--border-subtle);padding-bottom:1rem;">
+        <h2 style="font-size:1.6rem;">Admin Dashboard — Words & Universe</h2>
+        <button class="icon-btn" onclick="closeAdminModal()">✕</button>
+      </div>
+
+      <div id="admin-sync-stats"></div>
+
+      <div style="margin-bottom:1.8rem;">
+        <label style="font-weight:600;font-size:0.9rem;display:block;margin-bottom:0.5rem;">Select Featured Hero Post</label>
+        <select id="admin-featured-select" class="input-field" style="width:100%;">
+          <!-- Options populated by JS -->
+        </select>
+        <span style="font-size:0.78rem;color:var(--text-muted);display:block;margin-top:0.3rem;">
+          Changes which article appears in the top Hero Spotlight.
+        </span>
+      </div>
+
+      <div style="margin-bottom:1.8rem;">
+        <label style="font-weight:600;font-size:0.9rem;display:block;margin-bottom:0.5rem;">Add New Thought / Quote by Prince Chautmol</label>
+        <textarea id="admin-new-quote" class="input-field" style="width:100%;height:80px;margin-bottom:0.5rem;" placeholder="Enter inspiring quote text..."></textarea>
+        <input type="text" id="admin-new-quote-theme" class="input-field" style="width:100%;" placeholder="Theme / Topic (e.g. जीवन विचार, नाती)">
+      </div>
+
+      <div style="display:flex;justify-content:flex-end;gap:1rem;border-top:1px solid var(--border-subtle);padding-top:1.2rem;">
+        <button class="btn-outline" onclick="closeAdminModal()">Cancel</button>
+        <button class="btn-primary" onclick="saveAdminSettings()">Save Dashboard Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
